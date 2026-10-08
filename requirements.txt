@@ -1,0 +1,20 @@
+# Packages required to run this project.
+#
+# Install everything with:
+#     pip install -r requirements.txt
+#
+# For a NVIDIA GPU, install PyTorch from the CUDA site instead:
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+
+# YOLO models, training and inference
+ultralytics>=8.4.0
+
+# Deep learning framework used by Ultralytics
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Camera and video processing for the operator interface
+opencv-python>=4.8.0
+
+# Ultralytics pulls in PyYAML for reading dataset YAML files
+PyYAML>=6.0

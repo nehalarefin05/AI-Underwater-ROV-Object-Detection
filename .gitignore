@@ -1,0 +1,86 @@
+# ============================================================
+# Dataset (intentionally NOT committed)
+# ============================================================
+# The Seaclear Marine Debris Dataset is large and is kept out of Git.
+# See DATASET_AUDIT.md and SPLIT_REPORT.md for the full documentation.
+
+# Original raw dataset folders (site-camera pairs)
+/Bistrina/
+/Jakljan/
+/Lokrum/
+/Marseille/
+/Slano/
+
+# Original COCO annotation file
+/dataset.json
+
+# Generated YOLO datasets
+/yolo_dataset/
+/cross_domain_test/
+
+# ============================================================
+# Transfer packages and archives (too large for Git)
+/colab_transfer/
+/colab_transfer.zip
+/AI_Vision_ROV.zip
+*.zip
+
+# ============================================================
+# Training runs and generated output
+# ============================================================
+/runs/
+/smoke_test/
+*_speed_*/
+
+# Demo videos and large media outputs (regenerate by running the scripts)
+/*.mp4
+/*.avi
+/*.mkv
+/output_detection.*
+/detected_image.*
+/input_video.*
+
+# ============================================================
+# Ultralytics label cache files
+# ============================================================
+*.cache
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+*$py.class
+*.pyd
+
+# ============================================================
+# Virtual environments
+# ============================================================
+.venv/
+venv/
+env/
+ENV/
+
+# ============================================================
+# Editors and operating system
+# ============================================================
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# Notebooks (kept out, these projects use plain .py scripts)
+/*.ipynb
+
+# ============================================================
+# Temporary files
+# ============================================================
+/temp/
+/tmp/
+*.tmp
+*.bak
+~$*

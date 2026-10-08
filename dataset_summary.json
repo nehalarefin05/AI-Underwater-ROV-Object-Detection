@@ -1,0 +1,1931 @@
+{
+  "audit_metadata": {
+    "project": "AI-Based Underwater Visual Perception for Real-Time ROV Object Detection",
+    "audit_stage": "Dataset inspection / audit only - NO training, NO conversion, NO modification",
+    "dataset_identified_as": "Seaclear Marine Debris Dataset",
+    "audit_date": "2026-10-01",
+    "workspace_root": "C:\\Nehal uiu\\AI Vission",
+    "read_only_guarantee": "No file in the dataset was created, modified, renamed, moved or deleted."
+  },
+  "dataset_overview": {
+    "name": "Seaclear Marine Debris Dataset",
+    "description": "Marine litter + observed animals/plants + ROV parts captured by ROVs during Seaclear field experiments. 5 sites, 4 cameras, 11 site-camera subsets.",
+    "number_of_subsets": 11,
+    "subsets_merged": false,
+    "subset_layout": "<Site>/<Camera>/*.jpg",
+    "sites": [
+      "Bistrina",
+      "Jakljan",
+      "Lokrum",
+      "Marseille",
+      "Slano"
+    ],
+    "cameras": [
+      "Bluerobotics HD",
+      "Paralenz Vaquita",
+      "Paralenz Vaquita Gen 2",
+      "SIP-E323CV"
+    ]
+  },
+  "totals": {
+    "total_images": 8610,
+    "total_images_on_disk": 8610,
+    "total_annotation_records": 31555,
+    "total_annotation_files": 1,
+    "annotation_file": "dataset.json",
+    "annotation_format": "COCO (single consolidated JSON)",
+    "number_of_classes": 40,
+    "total_files_in_workspace": 8612,
+    "total_dataset_size_gb": 1.75
+  },
+  "image_properties": {
+    "formats": {
+      "JPEG": 8610
+    },
+    "color_modes": {
+      "RGB": 8610
+    },
+    "resolution_distribution": {
+      "1920x1080": 8610
+    },
+    "distinct_resolutions": 1,
+    "aspect_ratio_distribution": {
+      "1.778": 8610
+    },
+    "aspect_ratio": "16:9 (1.778)",
+    "file_size_bytes": {
+      "min": 69676,
+      "max": 1034527,
+      "mean": 218185,
+      "median": 155541,
+      "total_gb": 1.75
+    }
+  },
+  "annotation_format": {
+    "format": "COCO 1.0 detection + instance segmentation",
+    "top_level_keys": [
+      "annotations",
+      "categories",
+      "images"
+    ],
+    "bbox_format": "[x, y, width, height] in ABSOLUTE PIXELS",
+    "bbox_coordinate_space": "pixels",
+    "max_abs_bbox_coordinate": 1920,
+    "segmentation_present": true,
+    "segmentation_type": "COCO polygon (list of flattened coordinate lists)",
+    "iscrowd_values": {
+      "0": 31555
+    },
+    "image_entry_keys": {
+      "height": 8610,
+      "width": 8610,
+      "id": 8610,
+      "file_name": 8610,
+      "license": 3441,
+      "url": 3441,
+      "date_captured": 3441
+    },
+    "annotation_entry_keys": [
+      "area",
+      "bbox",
+      "category_id",
+      "id",
+      "image_id",
+      "iscrowd",
+      "segmentation"
+    ]
+  },
+  "classes": {
+    "count": 40,
+    "coco_id_range": [
+      1,
+      40
+    ],
+    "coco_ids_contiguous_from_zero": false,
+    "yolo_id_mapping_required": "yolo_class_id = coco_category_id - 1  (1..40 -> 0..39)",
+    "names_and_ids": [
+      {
+        "yolo_id": 0,
+        "coco_id": 1,
+        "name": "can_metal",
+        "instances": 1130,
+        "images_containing": 811,
+        "median_box_side_px": 72.0,
+        "min_box_side_px": 15.5,
+        "subsets_containing": 9
+      },
+      {
+        "yolo_id": 1,
+        "coco_id": 2,
+        "name": "tarp_plastic",
+        "instances": 31,
+        "images_containing": 31,
+        "median_box_side_px": 233.5,
+        "min_box_side_px": 97.3,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 2,
+        "coco_id": 3,
+        "name": "container_plastic",
+        "instances": 84,
+        "images_containing": 84,
+        "median_box_side_px": 167.9,
+        "min_box_side_px": 70.3,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 3,
+        "coco_id": 4,
+        "name": "bottle_plastic",
+        "instances": 1261,
+        "images_containing": 1127,
+        "median_box_side_px": 105.3,
+        "min_box_side_px": 17.3,
+        "subsets_containing": 10
+      },
+      {
+        "yolo_id": 4,
+        "coco_id": 5,
+        "name": "tube_cement",
+        "instances": 1404,
+        "images_containing": 1139,
+        "median_box_side_px": 426.3,
+        "min_box_side_px": 1.0,
+        "subsets_containing": 6
+      },
+      {
+        "yolo_id": 5,
+        "coco_id": 6,
+        "name": "plant",
+        "instances": 472,
+        "images_containing": 418,
+        "median_box_side_px": 150.7,
+        "min_box_side_px": 31.0,
+        "subsets_containing": 6
+      },
+      {
+        "yolo_id": 6,
+        "coco_id": 7,
+        "name": "container_middle_size_metal",
+        "instances": 60,
+        "images_containing": 60,
+        "median_box_side_px": 189.4,
+        "min_box_side_px": 42.8,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 7,
+        "coco_id": 8,
+        "name": "animal_etc",
+        "instances": 3749,
+        "images_containing": 2007,
+        "median_box_side_px": 134.4,
+        "min_box_side_px": 25.1,
+        "subsets_containing": 6
+      },
+      {
+        "yolo_id": 8,
+        "coco_id": 9,
+        "name": "animal_sponge",
+        "instances": 1110,
+        "images_containing": 731,
+        "median_box_side_px": 194.1,
+        "min_box_side_px": 15.2,
+        "subsets_containing": 4
+      },
+      {
+        "yolo_id": 9,
+        "coco_id": 10,
+        "name": "bottle_glass",
+        "instances": 2331,
+        "images_containing": 1355,
+        "median_box_side_px": 140.0,
+        "min_box_side_px": 11.6,
+        "subsets_containing": 8
+      },
+      {
+        "yolo_id": 10,
+        "coco_id": 11,
+        "name": "wreckage_metal",
+        "instances": 265,
+        "images_containing": 171,
+        "median_box_side_px": 189.8,
+        "min_box_side_px": 39.5,
+        "subsets_containing": 4
+      },
+      {
+        "yolo_id": 11,
+        "coco_id": 12,
+        "name": "unknown_instance",
+        "instances": 1195,
+        "images_containing": 884,
+        "median_box_side_px": 165.1,
+        "min_box_side_px": 13.2,
+        "subsets_containing": 8
+      },
+      {
+        "yolo_id": 12,
+        "coco_id": 13,
+        "name": "pipe_plastic",
+        "instances": 155,
+        "images_containing": 154,
+        "median_box_side_px": 148.0,
+        "min_box_side_px": 23.2,
+        "subsets_containing": 6
+      },
+      {
+        "yolo_id": 13,
+        "coco_id": 14,
+        "name": "net_plastic",
+        "instances": 960,
+        "images_containing": 900,
+        "median_box_side_px": 660.9,
+        "min_box_side_px": 69.4,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 14,
+        "coco_id": 15,
+        "name": "animal_shells",
+        "instances": 995,
+        "images_containing": 523,
+        "median_box_side_px": 96.7,
+        "min_box_side_px": 22.0,
+        "subsets_containing": 5
+      },
+      {
+        "yolo_id": 15,
+        "coco_id": 16,
+        "name": "rope_fiber",
+        "instances": 2039,
+        "images_containing": 1356,
+        "median_box_side_px": 370.0,
+        "min_box_side_px": 33.3,
+        "subsets_containing": 7
+      },
+      {
+        "yolo_id": 16,
+        "coco_id": 17,
+        "name": "animal_urchin",
+        "instances": 6462,
+        "images_containing": 1999,
+        "median_box_side_px": 59.5,
+        "min_box_side_px": 21.2,
+        "subsets_containing": 6
+      },
+      {
+        "yolo_id": 17,
+        "coco_id": 18,
+        "name": "cup_plastic",
+        "instances": 329,
+        "images_containing": 322,
+        "median_box_side_px": 79.7,
+        "min_box_side_px": 12.0,
+        "subsets_containing": 7
+      },
+      {
+        "yolo_id": 18,
+        "coco_id": 19,
+        "name": "brick_clay",
+        "instances": 606,
+        "images_containing": 416,
+        "median_box_side_px": 168.8,
+        "min_box_side_px": 36.7,
+        "subsets_containing": 4
+      },
+      {
+        "yolo_id": 19,
+        "coco_id": 20,
+        "name": "bag_plastic",
+        "instances": 882,
+        "images_containing": 852,
+        "median_box_side_px": 89.9,
+        "min_box_side_px": 8.0,
+        "subsets_containing": 7
+      },
+      {
+        "yolo_id": 20,
+        "coco_id": 21,
+        "name": "sanitaries_plastic",
+        "instances": 55,
+        "images_containing": 55,
+        "median_box_side_px": 95.4,
+        "min_box_side_px": 23.5,
+        "subsets_containing": 4
+      },
+      {
+        "yolo_id": 21,
+        "coco_id": 22,
+        "name": "clothing_fiber",
+        "instances": 298,
+        "images_containing": 291,
+        "median_box_side_px": 251.4,
+        "min_box_side_px": 77.0,
+        "subsets_containing": 9
+      },
+      {
+        "yolo_id": 22,
+        "coco_id": 23,
+        "name": "cup_ceramic",
+        "instances": 123,
+        "images_containing": 113,
+        "median_box_side_px": 40.4,
+        "min_box_side_px": 14.5,
+        "subsets_containing": 6
+      },
+      {
+        "yolo_id": 23,
+        "coco_id": 24,
+        "name": "boot_rubber",
+        "instances": 161,
+        "images_containing": 142,
+        "median_box_side_px": 272.6,
+        "min_box_side_px": 54.6,
+        "subsets_containing": 4
+      },
+      {
+        "yolo_id": 24,
+        "coco_id": 25,
+        "name": "tire_rubber",
+        "instances": 2556,
+        "images_containing": 2260,
+        "median_box_side_px": 331.0,
+        "min_box_side_px": 1.0,
+        "subsets_containing": 8
+      },
+      {
+        "yolo_id": 25,
+        "coco_id": 26,
+        "name": "jar_glass",
+        "instances": 62,
+        "images_containing": 50,
+        "median_box_side_px": 169.2,
+        "min_box_side_px": 43.2,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 26,
+        "coco_id": 27,
+        "name": "rov_cable",
+        "instances": 389,
+        "images_containing": 362,
+        "median_box_side_px": 624.0,
+        "min_box_side_px": 1.0,
+        "subsets_containing": 8
+      },
+      {
+        "yolo_id": 27,
+        "coco_id": 28,
+        "name": "rov_tortuga",
+        "instances": 55,
+        "images_containing": 55,
+        "median_box_side_px": 56.3,
+        "min_box_side_px": 24.9,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 28,
+        "coco_id": 29,
+        "name": "branch_wood",
+        "instances": 430,
+        "images_containing": 203,
+        "median_box_side_px": 206.7,
+        "min_box_side_px": 62.5,
+        "subsets_containing": 4
+      },
+      {
+        "yolo_id": 29,
+        "coco_id": 30,
+        "name": "furniture_wood",
+        "instances": 15,
+        "images_containing": 12,
+        "median_box_side_px": 108.0,
+        "min_box_side_px": 92.6,
+        "subsets_containing": 1
+      },
+      {
+        "yolo_id": 30,
+        "coco_id": 31,
+        "name": "snack_wrapper_plastic",
+        "instances": 172,
+        "images_containing": 172,
+        "median_box_side_px": 147.9,
+        "min_box_side_px": 26.2,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 31,
+        "coco_id": 32,
+        "name": "lid_plastic",
+        "instances": 20,
+        "images_containing": 20,
+        "median_box_side_px": 60.3,
+        "min_box_side_px": 19.5,
+        "subsets_containing": 2
+      },
+      {
+        "yolo_id": 32,
+        "coco_id": 33,
+        "name": "cardboard_paper",
+        "instances": 13,
+        "images_containing": 13,
+        "median_box_side_px": 125.3,
+        "min_box_side_px": 98.4,
+        "subsets_containing": 1
+      },
+      {
+        "yolo_id": 33,
+        "coco_id": 34,
+        "name": "rope_plastic",
+        "instances": 8,
+        "images_containing": 8,
+        "median_box_side_px": 634.6,
+        "min_box_side_px": 213.7,
+        "subsets_containing": 1
+      },
+      {
+        "yolo_id": 34,
+        "coco_id": 35,
+        "name": "cable_metal",
+        "instances": 149,
+        "images_containing": 143,
+        "median_box_side_px": 453.3,
+        "min_box_side_px": 81.1,
+        "subsets_containing": 1
+      },
+      {
+        "yolo_id": 35,
+        "coco_id": 36,
+        "name": "animal_fish",
+        "instances": 985,
+        "images_containing": 81,
+        "median_box_side_px": 34.0,
+        "min_box_side_px": 12.0,
+        "subsets_containing": 6
+      },
+      {
+        "yolo_id": 36,
+        "coco_id": 37,
+        "name": "snack_wrapper_paper",
+        "instances": 8,
+        "images_containing": 6,
+        "median_box_side_px": 58.7,
+        "min_box_side_px": 31.3,
+        "subsets_containing": 2
+      },
+      {
+        "yolo_id": 37,
+        "coco_id": 38,
+        "name": "rov_vehicle_leg",
+        "instances": 461,
+        "images_containing": 461,
+        "median_box_side_px": 257.7,
+        "min_box_side_px": 165.9,
+        "subsets_containing": 1
+      },
+      {
+        "yolo_id": 38,
+        "coco_id": 39,
+        "name": "rov_bluerov",
+        "instances": 58,
+        "images_containing": 58,
+        "median_box_side_px": 220.1,
+        "min_box_side_px": 60.6,
+        "subsets_containing": 3
+      },
+      {
+        "yolo_id": 39,
+        "coco_id": 40,
+        "name": "animal_starfish",
+        "instances": 17,
+        "images_containing": 17,
+        "median_box_side_px": 64.8,
+        "min_box_side_px": 29.3,
+        "subsets_containing": 1
+      }
+    ]
+  },
+  "class_distribution": {
+    "total_instances": 31555,
+    "mean_instances_per_class": 788.88,
+    "median_instances_per_class": 313.5,
+    "classes_with_zero_instances": [],
+    "ranked_descending": [
+      {
+        "rank": 1,
+        "name": "animal_urchin",
+        "instances": 6462,
+        "cumulative_pct": [
+          "animal_urchin",
+          6462,
+          20.48
+        ]
+      },
+      {
+        "rank": 2,
+        "name": "animal_etc",
+        "instances": 3749,
+        "cumulative_pct": [
+          "animal_etc",
+          3749,
+          32.36
+        ]
+      },
+      {
+        "rank": 3,
+        "name": "tire_rubber",
+        "instances": 2556,
+        "cumulative_pct": [
+          "tire_rubber",
+          2556,
+          40.46
+        ]
+      },
+      {
+        "rank": 4,
+        "name": "bottle_glass",
+        "instances": 2331,
+        "cumulative_pct": [
+          "bottle_glass",
+          2331,
+          47.85
+        ]
+      },
+      {
+        "rank": 5,
+        "name": "rope_fiber",
+        "instances": 2039,
+        "cumulative_pct": [
+          "rope_fiber",
+          2039,
+          54.31
+        ]
+      },
+      {
+        "rank": 6,
+        "name": "tube_cement",
+        "instances": 1404,
+        "cumulative_pct": [
+          "tube_cement",
+          1404,
+          58.76
+        ]
+      },
+      {
+        "rank": 7,
+        "name": "bottle_plastic",
+        "instances": 1261,
+        "cumulative_pct": [
+          "bottle_plastic",
+          1261,
+          62.75
+        ]
+      },
+      {
+        "rank": 8,
+        "name": "unknown_instance",
+        "instances": 1195,
+        "cumulative_pct": [
+          "unknown_instance",
+          1195,
+          66.54
+        ]
+      },
+      {
+        "rank": 9,
+        "name": "can_metal",
+        "instances": 1130,
+        "cumulative_pct": [
+          "can_metal",
+          1130,
+          70.12
+        ]
+      },
+      {
+        "rank": 10,
+        "name": "animal_sponge",
+        "instances": 1110,
+        "cumulative_pct": [
+          "animal_sponge",
+          1110,
+          73.64
+        ]
+      },
+      {
+        "rank": 11,
+        "name": "animal_shells",
+        "instances": 995,
+        "cumulative_pct": [
+          "animal_shells",
+          995,
+          76.79
+        ]
+      },
+      {
+        "rank": 12,
+        "name": "animal_fish",
+        "instances": 985,
+        "cumulative_pct": [
+          "animal_fish",
+          985,
+          79.91
+        ]
+      },
+      {
+        "rank": 13,
+        "name": "net_plastic",
+        "instances": 960,
+        "cumulative_pct": [
+          "net_plastic",
+          960,
+          82.96
+        ]
+      },
+      {
+        "rank": 14,
+        "name": "bag_plastic",
+        "instances": 882,
+        "cumulative_pct": [
+          "bag_plastic",
+          882,
+          85.75
+        ]
+      },
+      {
+        "rank": 15,
+        "name": "brick_clay",
+        "instances": 606,
+        "cumulative_pct": [
+          "brick_clay",
+          606,
+          87.67
+        ]
+      },
+      {
+        "rank": 16,
+        "name": "plant",
+        "instances": 472,
+        "cumulative_pct": [
+          "plant",
+          472,
+          89.17
+        ]
+      },
+      {
+        "rank": 17,
+        "name": "rov_vehicle_leg",
+        "instances": 461,
+        "cumulative_pct": [
+          "rov_vehicle_leg",
+          461,
+          90.63
+        ]
+      },
+      {
+        "rank": 18,
+        "name": "branch_wood",
+        "instances": 430,
+        "cumulative_pct": [
+          "branch_wood",
+          430,
+          91.99
+        ]
+      },
+      {
+        "rank": 19,
+        "name": "rov_cable",
+        "instances": 389,
+        "cumulative_pct": [
+          "rov_cable",
+          389,
+          93.22
+        ]
+      },
+      {
+        "rank": 20,
+        "name": "cup_plastic",
+        "instances": 329,
+        "cumulative_pct": [
+          "cup_plastic",
+          329,
+          94.27
+        ]
+      },
+      {
+        "rank": 21,
+        "name": "clothing_fiber",
+        "instances": 298,
+        "cumulative_pct": [
+          "clothing_fiber",
+          298,
+          95.21
+        ]
+      },
+      {
+        "rank": 22,
+        "name": "wreckage_metal",
+        "instances": 265,
+        "cumulative_pct": [
+          "wreckage_metal",
+          265,
+          96.05
+        ]
+      },
+      {
+        "rank": 23,
+        "name": "snack_wrapper_plastic",
+        "instances": 172,
+        "cumulative_pct": [
+          "snack_wrapper_plastic",
+          172,
+          96.6
+        ]
+      },
+      {
+        "rank": 24,
+        "name": "boot_rubber",
+        "instances": 161,
+        "cumulative_pct": [
+          "boot_rubber",
+          161,
+          97.11
+        ]
+      },
+      {
+        "rank": 25,
+        "name": "pipe_plastic",
+        "instances": 155,
+        "cumulative_pct": [
+          "pipe_plastic",
+          155,
+          97.6
+        ]
+      },
+      {
+        "rank": 26,
+        "name": "cable_metal",
+        "instances": 149,
+        "cumulative_pct": [
+          "cable_metal",
+          149,
+          98.07
+        ]
+      },
+      {
+        "rank": 27,
+        "name": "cup_ceramic",
+        "instances": 123,
+        "cumulative_pct": [
+          "cup_ceramic",
+          123,
+          98.46
+        ]
+      },
+      {
+        "rank": 28,
+        "name": "container_plastic",
+        "instances": 84,
+        "cumulative_pct": [
+          "container_plastic",
+          84,
+          98.73
+        ]
+      },
+      {
+        "rank": 29,
+        "name": "jar_glass",
+        "instances": 62,
+        "cumulative_pct": [
+          "jar_glass",
+          62,
+          98.92
+        ]
+      },
+      {
+        "rank": 30,
+        "name": "container_middle_size_metal",
+        "instances": 60,
+        "cumulative_pct": [
+          "container_middle_size_metal",
+          60,
+          99.11
+        ]
+      },
+      {
+        "rank": 31,
+        "name": "rov_bluerov",
+        "instances": 58,
+        "cumulative_pct": [
+          "rov_bluerov",
+          58,
+          99.3
+        ]
+      },
+      {
+        "rank": 32,
+        "name": "sanitaries_plastic",
+        "instances": 55,
+        "cumulative_pct": [
+          "sanitaries_plastic",
+          55,
+          99.47
+        ]
+      },
+      {
+        "rank": 33,
+        "name": "rov_tortuga",
+        "instances": 55,
+        "cumulative_pct": [
+          "rov_tortuga",
+          55,
+          99.65
+        ]
+      },
+      {
+        "rank": 34,
+        "name": "tarp_plastic",
+        "instances": 31,
+        "cumulative_pct": [
+          "tarp_plastic",
+          31,
+          99.74
+        ]
+      },
+      {
+        "rank": 35,
+        "name": "lid_plastic",
+        "instances": 20,
+        "cumulative_pct": [
+          "lid_plastic",
+          20,
+          99.81
+        ]
+      },
+      {
+        "rank": 36,
+        "name": "animal_starfish",
+        "instances": 17,
+        "cumulative_pct": [
+          "animal_starfish",
+          17,
+          99.86
+        ]
+      },
+      {
+        "rank": 37,
+        "name": "furniture_wood",
+        "instances": 15,
+        "cumulative_pct": [
+          "furniture_wood",
+          15,
+          99.91
+        ]
+      },
+      {
+        "rank": 38,
+        "name": "cardboard_paper",
+        "instances": 13,
+        "cumulative_pct": [
+          "cardboard_paper",
+          13,
+          99.95
+        ]
+      },
+      {
+        "rank": 39,
+        "name": "rope_plastic",
+        "instances": 8,
+        "cumulative_pct": [
+          "rope_plastic",
+          8,
+          99.97
+        ]
+      },
+      {
+        "rank": 40,
+        "name": "snack_wrapper_paper",
+        "instances": 8,
+        "cumulative_pct": [
+          "snack_wrapper_paper",
+          8,
+          100.0
+        ]
+      }
+    ],
+    "instances_by_material_group": {
+      "animal": 13318,
+      "plastic": 3957,
+      "rubber": 2717,
+      "glass": 2393,
+      "fiber": 2337,
+      "metal": 1604,
+      "cement": 1404,
+      "other": 1195,
+      "rov_part": 963,
+      "clay": 606,
+      "flora": 472,
+      "wood": 445,
+      "ceramic": 123,
+      "paper": 21
+    }
+  },
+  "subsets": {
+    "count": 11,
+    "not_merged": true,
+    "images_per_site": {
+      "Bistrina": 3652,
+      "Jakljan": 306,
+      "Lokrum": 972,
+      "Marseille": 3441,
+      "Slano": 239
+    },
+    "images_per_camera": {
+      "Bluerobotics HD": 2355,
+      "Paralenz Vaquita": 136,
+      "Paralenz Vaquita Gen 2": 2146,
+      "SIP-E323CV": 3973
+    },
+    "images_per_site_camera": {
+      "Bistrina/Bluerobotics HD": 1390,
+      "Bistrina/Paralenz Vaquita Gen 2": 2069,
+      "Bistrina/SIP-E323CV": 193,
+      "Jakljan/Bluerobotics HD": 241,
+      "Jakljan/Paralenz Vaquita": 65,
+      "Lokrum/Bluerobotics HD": 556,
+      "Lokrum/Paralenz Vaquita Gen 2": 77,
+      "Lokrum/SIP-E323CV": 339,
+      "Marseille/SIP-E323CV": 3441,
+      "Slano/Bluerobotics HD": 168,
+      "Slano/Paralenz Vaquita": 71
+    },
+    "detail": [
+      {
+        "site_camera": "Bistrina / Bluerobotics HD",
+        "images": 1390,
+        "instances": 6986,
+        "instances_per_image": 5.03,
+        "distinct_classes_present": 28,
+        "classes_absent": [
+          "container_middle_size_metal",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "animal_fish",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "rov_bluerov",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "animal_urchin",
+            "n": 2341
+          },
+          {
+            "name": "animal_etc",
+            "n": 1318
+          },
+          {
+            "name": "rope_fiber",
+            "n": 571
+          },
+          {
+            "name": "animal_sponge",
+            "n": 466
+          },
+          {
+            "name": "net_plastic",
+            "n": 364
+          },
+          {
+            "name": "bottle_glass",
+            "n": 350
+          }
+        ],
+        "n_classes_absent": 12
+      },
+      {
+        "site_camera": "Bistrina / Paralenz Vaquita Gen 2",
+        "images": 2069,
+        "instances": 13527,
+        "instances_per_image": 6.54,
+        "distinct_classes_present": 30,
+        "classes_absent": [
+          "tarp_plastic",
+          "container_middle_size_metal",
+          "sanitaries_plastic",
+          "jar_glass",
+          "rov_cable",
+          "rov_tortuga",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "rov_bluerov",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "animal_urchin",
+            "n": 3708
+          },
+          {
+            "name": "animal_etc",
+            "n": 2288
+          },
+          {
+            "name": "bottle_glass",
+            "n": 1356
+          },
+          {
+            "name": "rope_fiber",
+            "n": 1340
+          },
+          {
+            "name": "animal_shells",
+            "n": 735
+          },
+          {
+            "name": "net_plastic",
+            "n": 589
+          }
+        ],
+        "n_classes_absent": 10
+      },
+      {
+        "site_camera": "Bistrina / SIP-E323CV",
+        "images": 193,
+        "instances": 751,
+        "instances_per_image": 3.89,
+        "distinct_classes_present": 18,
+        "classes_absent": [
+          "tarp_plastic",
+          "container_plastic",
+          "container_middle_size_metal",
+          "bottle_glass",
+          "brick_clay",
+          "sanitaries_plastic",
+          "cup_ceramic",
+          "boot_rubber",
+          "jar_glass",
+          "rov_tortuga",
+          "branch_wood",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "animal_fish",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "rov_bluerov",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "animal_urchin",
+            "n": 369
+          },
+          {
+            "name": "animal_etc",
+            "n": 86
+          },
+          {
+            "name": "rope_fiber",
+            "n": 62
+          },
+          {
+            "name": "animal_sponge",
+            "n": 49
+          },
+          {
+            "name": "rov_cable",
+            "n": 48
+          },
+          {
+            "name": "animal_shells",
+            "n": 26
+          }
+        ],
+        "n_classes_absent": 22
+      },
+      {
+        "site_camera": "Jakljan / Bluerobotics HD",
+        "images": 241,
+        "instances": 793,
+        "instances_per_image": 3.29,
+        "distinct_classes_present": 18,
+        "classes_absent": [
+          "container_plastic",
+          "tube_cement",
+          "container_middle_size_metal",
+          "wreckage_metal",
+          "pipe_plastic",
+          "net_plastic",
+          "cup_plastic",
+          "bag_plastic",
+          "sanitaries_plastic",
+          "boot_rubber",
+          "jar_glass",
+          "rov_tortuga",
+          "branch_wood",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "bottle_glass",
+            "n": 180
+          },
+          {
+            "name": "brick_clay",
+            "n": 151
+          },
+          {
+            "name": "can_metal",
+            "n": 82
+          },
+          {
+            "name": "animal_sponge",
+            "n": 73
+          },
+          {
+            "name": "unknown_instance",
+            "n": 71
+          },
+          {
+            "name": "bottle_plastic",
+            "n": 56
+          }
+        ],
+        "n_classes_absent": 22
+      },
+      {
+        "site_camera": "Jakljan / Paralenz Vaquita",
+        "images": 65,
+        "instances": 164,
+        "instances_per_image": 2.52,
+        "distinct_classes_present": 7,
+        "classes_absent": [
+          "tarp_plastic",
+          "container_plastic",
+          "bottle_plastic",
+          "tube_cement",
+          "container_middle_size_metal",
+          "animal_etc",
+          "animal_sponge",
+          "wreckage_metal",
+          "unknown_instance",
+          "pipe_plastic",
+          "net_plastic",
+          "animal_shells",
+          "rope_fiber",
+          "animal_urchin",
+          "cup_plastic",
+          "brick_clay",
+          "bag_plastic",
+          "sanitaries_plastic",
+          "cup_ceramic",
+          "boot_rubber",
+          "jar_glass",
+          "rov_tortuga",
+          "branch_wood",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "animal_fish",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "bottle_glass",
+            "n": 52
+          },
+          {
+            "name": "rov_cable",
+            "n": 44
+          },
+          {
+            "name": "rov_bluerov",
+            "n": 43
+          },
+          {
+            "name": "tire_rubber",
+            "n": 12
+          },
+          {
+            "name": "can_metal",
+            "n": 10
+          },
+          {
+            "name": "clothing_fiber",
+            "n": 2
+          }
+        ],
+        "n_classes_absent": 33
+      },
+      {
+        "site_camera": "Lokrum / Bluerobotics HD",
+        "images": 556,
+        "instances": 2480,
+        "instances_per_image": 4.46,
+        "distinct_classes_present": 24,
+        "classes_absent": [
+          "tarp_plastic",
+          "container_plastic",
+          "plant",
+          "container_middle_size_metal",
+          "animal_sponge",
+          "wreckage_metal",
+          "net_plastic",
+          "rope_fiber",
+          "brick_clay",
+          "boot_rubber",
+          "jar_glass",
+          "furniture_wood",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "rov_vehicle_leg",
+            "n": 461
+          },
+          {
+            "name": "can_metal",
+            "n": 453
+          },
+          {
+            "name": "bottle_plastic",
+            "n": 304
+          },
+          {
+            "name": "branch_wood",
+            "n": 224
+          },
+          {
+            "name": "animal_fish",
+            "n": 223
+          },
+          {
+            "name": "unknown_instance",
+            "n": 200
+          }
+        ],
+        "n_classes_absent": 16
+      },
+      {
+        "site_camera": "Lokrum / Paralenz Vaquita Gen 2",
+        "images": 77,
+        "instances": 913,
+        "instances_per_image": 11.86,
+        "distinct_classes_present": 13,
+        "classes_absent": [
+          "tarp_plastic",
+          "container_plastic",
+          "tube_cement",
+          "plant",
+          "container_middle_size_metal",
+          "animal_etc",
+          "animal_sponge",
+          "bottle_glass",
+          "wreckage_metal",
+          "unknown_instance",
+          "net_plastic",
+          "animal_shells",
+          "animal_urchin",
+          "brick_clay",
+          "clothing_fiber",
+          "tire_rubber",
+          "jar_glass",
+          "branch_wood",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "rov_bluerov"
+        ],
+        "top6_classes": [
+          {
+            "name": "animal_fish",
+            "n": 647
+          },
+          {
+            "name": "bottle_plastic",
+            "n": 47
+          },
+          {
+            "name": "rope_fiber",
+            "n": 41
+          },
+          {
+            "name": "can_metal",
+            "n": 39
+          },
+          {
+            "name": "cup_plastic",
+            "n": 28
+          },
+          {
+            "name": "boot_rubber",
+            "n": 25
+          }
+        ],
+        "n_classes_absent": 27
+      },
+      {
+        "site_camera": "Lokrum / SIP-E323CV",
+        "images": 339,
+        "instances": 691,
+        "instances_per_image": 2.04,
+        "distinct_classes_present": 13,
+        "classes_absent": [
+          "tarp_plastic",
+          "container_plastic",
+          "tube_cement",
+          "plant",
+          "animal_etc",
+          "animal_sponge",
+          "wreckage_metal",
+          "pipe_plastic",
+          "net_plastic",
+          "animal_shells",
+          "animal_urchin",
+          "brick_clay",
+          "sanitaries_plastic",
+          "cup_ceramic",
+          "boot_rubber",
+          "tire_rubber",
+          "jar_glass",
+          "rov_tortuga",
+          "furniture_wood",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "rov_bluerov",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "bottle_plastic",
+            "n": 151
+          },
+          {
+            "name": "clothing_fiber",
+            "n": 142
+          },
+          {
+            "name": "snack_wrapper_plastic",
+            "n": 105
+          },
+          {
+            "name": "animal_fish",
+            "n": 80
+          },
+          {
+            "name": "can_metal",
+            "n": 76
+          },
+          {
+            "name": "cup_plastic",
+            "n": 37
+          }
+        ],
+        "n_classes_absent": 27
+      },
+      {
+        "site_camera": "Marseille / SIP-E323CV",
+        "images": 3441,
+        "instances": 4094,
+        "instances_per_image": 1.19,
+        "distinct_classes_present": 5,
+        "classes_absent": [
+          "can_metal",
+          "tarp_plastic",
+          "container_plastic",
+          "plant",
+          "container_middle_size_metal",
+          "animal_etc",
+          "animal_sponge",
+          "bottle_glass",
+          "wreckage_metal",
+          "unknown_instance",
+          "pipe_plastic",
+          "net_plastic",
+          "animal_shells",
+          "rope_fiber",
+          "animal_urchin",
+          "cup_plastic",
+          "brick_clay",
+          "sanitaries_plastic",
+          "clothing_fiber",
+          "cup_ceramic",
+          "boot_rubber",
+          "jar_glass",
+          "rov_tortuga",
+          "branch_wood",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "animal_fish",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "rov_bluerov",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "tire_rubber",
+            "n": 2123
+          },
+          {
+            "name": "tube_cement",
+            "n": 1031
+          },
+          {
+            "name": "bag_plastic",
+            "n": 668
+          },
+          {
+            "name": "rov_cable",
+            "n": 171
+          },
+          {
+            "name": "bottle_plastic",
+            "n": 101
+          }
+        ],
+        "n_classes_absent": 35
+      },
+      {
+        "site_camera": "Slano / Bluerobotics HD",
+        "images": 168,
+        "instances": 932,
+        "instances_per_image": 5.55,
+        "distinct_classes_present": 23,
+        "classes_absent": [
+          "animal_sponge",
+          "net_plastic",
+          "animal_shells",
+          "bag_plastic",
+          "tire_rubber",
+          "rov_cable",
+          "rov_tortuga",
+          "branch_wood",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "rov_vehicle_leg",
+          "rov_bluerov",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "bottle_glass",
+            "n": 222
+          },
+          {
+            "name": "unknown_instance",
+            "n": 173
+          },
+          {
+            "name": "plant",
+            "n": 128
+          },
+          {
+            "name": "tube_cement",
+            "n": 87
+          },
+          {
+            "name": "bottle_plastic",
+            "n": 70
+          },
+          {
+            "name": "can_metal",
+            "n": 37
+          }
+        ],
+        "n_classes_absent": 17
+      },
+      {
+        "site_camera": "Slano / Paralenz Vaquita",
+        "images": 71,
+        "instances": 224,
+        "instances_per_image": 3.15,
+        "distinct_classes_present": 7,
+        "classes_absent": [
+          "can_metal",
+          "tarp_plastic",
+          "container_plastic",
+          "tube_cement",
+          "plant",
+          "animal_etc",
+          "animal_sponge",
+          "wreckage_metal",
+          "pipe_plastic",
+          "net_plastic",
+          "animal_shells",
+          "rope_fiber",
+          "animal_urchin",
+          "cup_plastic",
+          "brick_clay",
+          "bag_plastic",
+          "sanitaries_plastic",
+          "cup_ceramic",
+          "boot_rubber",
+          "rov_cable",
+          "rov_tortuga",
+          "branch_wood",
+          "furniture_wood",
+          "snack_wrapper_plastic",
+          "lid_plastic",
+          "cardboard_paper",
+          "rope_plastic",
+          "cable_metal",
+          "animal_fish",
+          "snack_wrapper_paper",
+          "rov_vehicle_leg",
+          "rov_bluerov",
+          "animal_starfish"
+        ],
+        "top6_classes": [
+          {
+            "name": "bottle_glass",
+            "n": 100
+          },
+          {
+            "name": "jar_glass",
+            "n": 32
+          },
+          {
+            "name": "clothing_fiber",
+            "n": 31
+          },
+          {
+            "name": "unknown_instance",
+            "n": 25
+          },
+          {
+            "name": "container_middle_size_metal",
+            "n": 20
+          },
+          {
+            "name": "tire_rubber",
+            "n": 11
+          }
+        ],
+        "n_classes_absent": 33
+      }
+    ]
+  },
+  "splits": {
+    "existing_splits": "NONE",
+    "train_val_test_directories_found": [],
+    "dataset_yaml_files_found": [],
+    "yolo_label_txt_files_found": [],
+    "images_with_split_keyword_in_path": 0,
+    "train": {
+      "images": 0,
+      "annotations": 0,
+      "labels": 0,
+      "status": "does not exist"
+    },
+    "val": {
+      "images": 0,
+      "annotations": 0,
+      "labels": 0,
+      "status": "does not exist"
+    },
+    "test": {
+      "images": 0,
+      "annotations": 0,
+      "labels": 0,
+      "status": "does not exist"
+    },
+    "images_annotated": 8610,
+    "images_unannotated": 0
+  },
+  "data_quality": {
+    "images_without_labels": {
+      "count": 0,
+      "note": "Meaningful only after YOLO conversion; today every image has >=1 COCO annotation."
+    },
+    "labels_without_images": {
+      "count": 0,
+      "note": "COCO is a single JSON, so this cannot occur."
+    },
+    "empty_label_files": {
+      "count": 0,
+      "note": "No per-image label files exist yet."
+    },
+    "invalid_class_ids": {
+      "count": 0,
+      "offending_ids": []
+    },
+    "invalid_bounding_boxes": {
+      "count": 0,
+      "breakdown": {},
+      "boxes_overflowing_frame": {
+        "none": 31555,
+        "1-10px": 0,
+        "11-100px": 0,
+        ">100px": 0
+      },
+      "bbox_wh_range_px": {
+        "min_w": 1,
+        "min_h": 1,
+        "max_w": 1920,
+        "max_h": 1080
+      },
+      "iscrowd_annotations": 0
+    },
+    "corrupted_or_unreadable_images": {
+      "count": 0,
+      "files": []
+    },
+    "zero_byte_files": {
+      "count": 0
+    },
+    "images_in_json_missing_on_disk": {
+      "count": 0,
+      "sample": []
+    },
+    "orphan_images_not_in_json": {
+      "count": 0,
+      "sample": []
+    },
+    "ambiguous_filenames_in_multiple_folders": {
+      "count": 0
+    },
+    "duplicate_image_ids": {
+      "count": 0
+    },
+    "duplicate_annotation_ids": {
+      "count": 0
+    },
+    "duplicate_filenames_within_json": {},
+    "exact_duplicate_images_bytewise": {
+      "method": "MD5 over full file bytes, size-prefiltered",
+      "redundant_copies": 0,
+      "sample": []
+    },
+    "near_duplicate_images_perceptual": {
+      "method": {
+        "algo": "dHash 64-bit (8x8)",
+        "hamming_threshold": 6
+      },
+      "pairs_found": 53913,
+      "images_involved": 4515,
+      "pct_of_dataset_affected": 52.44,
+      "consecutive_frame_similarity_per_subset": {
+        "Bistrina/Bluerobotics HD": {
+          "consecutive_pairs": 1389,
+          "mean_hamming_consecutive_frames": 13.91,
+          "median_hamming_consecutive_frames": 14,
+          "pct_consecutive_frames_le_6": 10.8
+        },
+        "Bistrina/Paralenz Vaquita Gen 2": {
+          "consecutive_pairs": 2068,
+          "mean_hamming_consecutive_frames": 9.82,
+          "median_hamming_consecutive_frames": 9.0,
+          "pct_consecutive_frames_le_6": 32.83
+        },
+        "Bistrina/SIP-E323CV": {
+          "consecutive_pairs": 192,
+          "mean_hamming_consecutive_frames": 9.25,
+          "median_hamming_consecutive_frames": 7.0,
+          "pct_consecutive_frames_le_6": 46.35
+        },
+        "Jakljan/Bluerobotics HD": {
+          "consecutive_pairs": 240,
+          "mean_hamming_consecutive_frames": 16.52,
+          "median_hamming_consecutive_frames": 16.0,
+          "pct_consecutive_frames_le_6": 9.58
+        },
+        "Jakljan/Paralenz Vaquita": {
+          "consecutive_pairs": 64,
+          "mean_hamming_consecutive_frames": 16.75,
+          "median_hamming_consecutive_frames": 17.0,
+          "pct_consecutive_frames_le_6": 6.25
+        },
+        "Lokrum/Bluerobotics HD": {
+          "consecutive_pairs": 555,
+          "mean_hamming_consecutive_frames": 15.91,
+          "median_hamming_consecutive_frames": 16,
+          "pct_consecutive_frames_le_6": 22.88
+        },
+        "Lokrum/Paralenz Vaquita Gen 2": {
+          "consecutive_pairs": 76,
+          "mean_hamming_consecutive_frames": 9.37,
+          "median_hamming_consecutive_frames": 7.0,
+          "pct_consecutive_frames_le_6": 40.79
+        },
+        "Lokrum/SIP-E323CV": {
+          "consecutive_pairs": 338,
+          "mean_hamming_consecutive_frames": 10.91,
+          "median_hamming_consecutive_frames": 11.0,
+          "pct_consecutive_frames_le_6": 28.7
+        },
+        "Marseille/SIP-E323CV": {
+          "consecutive_pairs": 3440,
+          "mean_hamming_consecutive_frames": 1.74,
+          "median_hamming_consecutive_frames": 1.0,
+          "pct_consecutive_frames_le_6": 98.05
+        },
+        "Slano/Bluerobotics HD": {
+          "consecutive_pairs": 167,
+          "mean_hamming_consecutive_frames": 24.77,
+          "median_hamming_consecutive_frames": 25,
+          "pct_consecutive_frames_le_6": 0.6
+        },
+        "Slano/Paralenz Vaquita": {
+          "consecutive_pairs": 70,
+          "mean_hamming_consecutive_frames": 10.47,
+          "median_hamming_consecutive_frames": 10.0,
+          "pct_consecutive_frames_le_6": 22.86
+        }
+      },
+      "interpretation": "ROV footage was extracted frame-by-frame. Consecutive frames are near-identical, especially Marseille/SIP-E323CV (98% of adjacent frame pairs at Hamming<=6). A naive random split would leak near-duplicate frames across train and val and inflate metrics."
+    }
+  },
+  "object_scale": {
+    "note": "Real-time ROV detection is small-object dominated; this is the core modelling constraint.",
+    "box_side_px": {
+      "min": 1.0,
+      "max": 1439.3,
+      "median": 130.1,
+      "mean": 208.3,
+      "p05": 33.2,
+      "p95": 629.2
+    },
+    "distribution_by_box_side": {
+      "tiny_side<16px": 319,
+      "small_16-32px": 1133,
+      "small_32-64px": 5436,
+      "medium_64-128px": 8730,
+      "large_128-256px": 7289,
+      "verylarge_>256px": 8648
+    },
+    "pct_objects_side_lt_32px": 4.6,
+    "pct_objects_side_lt_64px": 21.83,
+    "pct_objects_side_gt_256px": 27.41,
+    "pct_instances_below_1pct_of_frame": 53.4,
+    "pct_instances_below_0_1pct_of_frame": 10.59,
+    "instances_with_a_side_below_16px": 465,
+    "instances_with_a_side_below_4px": 249,
+    "objects_per_image": {
+      "min": 1,
+      "max": 74,
+      "mean": 3.665,
+      "median": 2.0,
+      "distribution": {
+        "1": 3628,
+        "2": 1282,
+        "3": 680,
+        "4": 597,
+        "5": 513,
+        "6": 414,
+        "7": 344,
+        "8": 247,
+        "9": 236,
+        "10": 669
+      },
+      "pct_images_with_1_object": 42.14,
+      "pct_images_with_5plus": 28.14
+    }
+  },
+  "class_imbalance": {
+    "max_class": {
+      "name": "animal_urchin",
+      "instances": 6462
+    },
+    "min_nonzero_class": {
+      "name": "rope_plastic",
+      "instances": 8
+    },
+    "ratio_max_to_min_nonzero": 807.75,
+    "median_instances": 313.5,
+    "mean_instances": 788.88,
+    "classes_under_50_instances": 7,
+    "classes_under_10_instances": 2,
+    "classes_under_100_instances": 13,
+    "classes_under_100_instances_names": [
+      "tarp_plastic",
+      "container_plastic",
+      "container_middle_size_metal",
+      "sanitaries_plastic",
+      "jar_glass",
+      "rov_tortuga",
+      "furniture_wood",
+      "lid_plastic",
+      "cardboard_paper",
+      "rope_plastic",
+      "snack_wrapper_paper",
+      "rov_bluerov",
+      "animal_starfish"
+    ],
+    "classes_present_in_only_one_subset": [
+      "animal_starfish",
+      "cable_metal",
+      "cardboard_paper",
+      "furniture_wood",
+      "rope_plastic",
+      "rov_vehicle_leg"
+    ],
+    "note": "Max:min ratio ~808:1. A single-image-per-frame dataset with long near-duplicate runs also means rare classes have very low effective sample diversity."
+  },
+  "domain_shift": {
+    "note": "The 11 subsets are distinct acquisition domains and must not be silently merged.",
+    "subsets_with_fewer_than_10_classes": [
+      "Jakljan / Paralenz Vaquita",
+      "Marseille / SIP-E323CV",
+      "Slano / Paralenz Vaquita"
+    ],
+    "subsets_with_fewer_than_100_images": [
+      "Jakljan/Paralenz Vaquita",
+      "Lokrum/Paralenz Vaquita Gen 2",
+      "Slano/Paralenz Vaquita"
+    ],
+    "largest_subset_share_pct": 39.97
+  },
+  "yolo_compatibility": {
+    "directly_usable_by_ultralytics": false,
+    "reason": "Annotations are COCO JSON with pixel bboxes. Ultralytics YOLO requires per-image .txt label files with normalized cx,cy,w,h and 0-based class ids. No dataset.yaml and no train/val/test structure exist.",
+    "blocking_items": [
+      "No YOLO .txt label files (COCO JSON only)",
+      "Class ids are 1..40, YOLO requires 0..39 contiguous",
+      "bbox in pixels, YOLO requires normalized cx,cy,w,h",
+      "No dataset.yaml",
+      "No train/val/test split",
+      "Filenames are not unique per folder in a YOLO-safe layout (bare names like '1.jpg')"
+    ],
+    "already_satisfied": [
+      "All 8610 images decode cleanly",
+      "All 31555 bboxes valid and fully inside 1920x1080",
+      "No invalid class ids",
+      "No orphan images / missing files / exact duplicates",
+      "Every image has at least one annotation",
+      "No iscrowd regions to special-case",
+      "Polygon segmentation available for a future YOLO-seg variant"
+    ],
+    "estimated_conversion_effort": "Low - a single deterministic COCO->YOLO pass over 31555 boxes."
+  },
+  "verdict": {
+    "ready_for_yolo_training": false,
+    "blocking": [
+      "annotations_not_in_yolo_format",
+      "no_train_val_test_split",
+      "no_dataset_yaml"
+    ],
+    "data_integrity": "EXCELLENT - zero corruption, zero invalid boxes, zero orphan/missing files.",
+    "summary": "Structurally pristine, but it is a raw COCO release. It must be converted to YOLO format and split with a leakage-aware, group-wise strategy before any training. A naive random split would produce meaningless validation scores."
+  },
+  "recommended_next_steps": [
+    "1. Convert COCO -> YOLO .txt (read-only pass writing to a NEW output folder; never edit dataset.json or the source folders). Map yolo_id = coco_id - 1; convert [x,y,w,h] px -> normalized cx,cy,w,h.",
+    "2. Write a dataset.yaml listing the 40 class names in coco_id order with absolute paths.",
+    "3. Build a leakage-aware split: group consecutive frames into blocks per site-camera subset, then split BLOCK-wise (not image-wise), stratified by class. Never split adjacent frames across train and val.",
+    "4. Treat the 11 subsets as separate domains. Keep all frames of one subset together; optionally hold out a whole site-camera subset as a cross-domain test set to measure real ROV generalisation.",
+    "5. Decide the rare-class policy for the 7 classes with <50 instances and the 2 with <10 (rope_plastic, snack_wrapper_paper). Consider a core-class model (e.g. 15-20 well-populated debris classes) and report the full 40-class model separately.",
+    "6. Consider re-bucketing/tiling at inference for small objects: 21.8% of objects have a box side <64 px and 53.4% cover <1% of the frame.",
+    "7. Re-run this audit on the converted YOLO output to confirm parity (31555 label lines, 40 classes) BEFORE starting training."
+  ],
+  "explicitly_not_done_in_this_stage": [
+    "no model training",
+    "no annotation conversion",
+    "no preprocessing or resizing",
+    "no file renamed, moved, deleted or modified",
+    "no new dataset downloaded",
+    "no subsets merged",
+    "no train/val/test split created"
+  ]
+}
